@@ -11,21 +11,37 @@ git理解原理
 
 使用：
 
-注册
+
+#注册
  全局用户名，全局邮件联系人
 
+$ git config --global user.name "Your Name"$ git config --global user.email "email@example.com"
+
+
+#创建新库, 因为叫repository
+(就是管理目录和文件的版本)
 init
 初始化：
-选择目录
+选择一个目录作为新库
 使用git init
+$ git init
+
+
+
 
 
 Add
-添加到中间区
+拷贝文件到库目录
+然后注册添加到git的中间区
+$ git add readme.txt
 
 
 Commit
-从中间区提交到主库
+使用commit的把所有中间区文件提交到主库
+$ git commit
+$ git commit -m "wrote a readme file"
+
+
 
 
 Checkout
@@ -69,3 +85,9 @@ git push -u origin master
 
 此后，每次本地提交后，只要有必要，就可以使用命令推送最新修改；
 git push origin master
+
+
+github克隆到本地库
+git clone git@github.com:shawnzhuo/gitskills.git
+
+
